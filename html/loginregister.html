@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Teacher Booking System</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <h2 style="text-align: center;">Student-Teacher Booking System</h2>
+
+    <div class="container">
+        <h3>Register</h3>
+        <form id="register-form">
+            <input type="text" placeholder="Name" id="name" required />
+            <select id="role">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="email" placeholder="Email" id="email" required />
+            <input type="password" placeholder="Password" id="password" required />
+            <button type="submit">Register</button>
+        </form>
+        <h3>Login</h3>
+        <form id="login-form">
+            <input type="email" placeholder="Email" id="login-email" required />
+            <input type="password" placeholder="Password" id="login-password" required />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Student-Teacher Booking</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <h2>Admin Panel</h2>
+
+    <div class="container">
+        <h3>Add Teacher</h3>
+        <form id="add-teacher-form">
+            <input type="text" placeholder="Name" id="teacher-name" required />
+            <input type="text" placeholder="Department" id="teacher-dept" required />
+            <input type="text" placeholder="Subject" id="teacher-subject" required />
+            <button type="submit">Add Teacher</button>
+        </form>
+
+        <h3>Manage Teachers</h3>
+        <table id="teachers-table">
+            <tr><th>Name</th><th>Department</th><th>Subject</th><th>Action</th></tr>
+        </table>
+
+        <h3>Approve Student Registrations</h3>
+        <table id="students-table">
+            <tr><th>Name</th><th>Email</th><th>Status</th><th>Action</th></tr>
+        </table>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
