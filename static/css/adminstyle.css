@@ -1,0 +1,163 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #99bcdb, #e2b4d6);
+    margin: 0;
+    padding: 0;
+    color: #4c4c51;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 900px; 
+    padding: 30px;
+    background: #ffffffcc;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 1s ease-out;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #10110c9d;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    color: #4caf50;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+
+button {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+button.action-btn {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.action-btn:hover {
+    background-color: #f57c00;
+}
+
+
+.status-approved {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

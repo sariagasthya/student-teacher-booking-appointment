@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #99bcdb, #e2b4d6); 
+    margin: 0;
+    padding: 0;
+    color: #4c4c51;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 900px; 
+    padding: 30px;
+    background: #ffffffcc;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #10110c9d;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+button.action-btn {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.action-btn:hover {
+    background-color: #f57c00;
+}
+
+
+.status-approved {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+
+#messages-container {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+
+#logout-button {
+    background-color: #d32f2f;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 30px;
+}
+
+#logout-button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

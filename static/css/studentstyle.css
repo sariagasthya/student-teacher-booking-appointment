@@ -1,0 +1,141 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #99bcdb, #e2b4d6); /* Soft gradient background */
+    margin: 0;
+    padding: 0;
+    color: #4c4c51;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px; 
+    background: #ffffffcc; 
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+
+h2 {
+    font-size: 28px;
+    color: #10110c9d;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #4caf50;
+    margin-bottom: 20px;
+}
+
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05); 
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+#error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status-approved {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #d32f2f;
+    font-weight: bold;
+}

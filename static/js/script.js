@@ -1,4 +1,4 @@
-// Registration
+
 document.getElementById('register-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const user = {
@@ -13,7 +13,7 @@ document.getElementById('register-form')?.addEventListener('submit', (e) => {
     localStorage.setItem('users', JSON.stringify(users));
     alert('Registration Successful!');
 });
-// Login System
+
 document.getElementById('login-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = document.getElementById('login-email').value;
@@ -25,14 +25,14 @@ document.getElementById('login-form')?.addEventListener('submit', (e) => {
         alert(`Welcome ${user.role}!`);
         localStorage.setItem('loggedInUser', JSON.stringify(user));
 
-        // Redirect based on role
+        
         window.location.href = `${user.role}.html`;
     } else {
         alert('Invalid login credentials.');
     }
 });
 
-// Student Booking
+
 document.getElementById('book-appointment')?.addEventListener('click', () => {
     const teacherName = document.getElementById('teacher-name').value;
     const time = document.getElementById('appointment-time').value;
@@ -50,9 +50,8 @@ document.getElementById('book-appointment')?.addEventListener('click', () => {
     }
 });
 
-// Admin Panel Script
 
-// Add Teacher
+
 const teacherForm = document.getElementById('add-teacher-form');
 teacherForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -69,7 +68,7 @@ teacherForm.addEventListener('submit', (e) => {
     displayTeachers();
 });
 
-// Display Teachers
+
 function displayTeachers() {
     const teachers = JSON.parse(localStorage.getItem('teachers')) || [];
     const table = document.getElementById('teachers-table');
@@ -87,7 +86,7 @@ function displayTeachers() {
     });
 }
 
-// Delete Teacher
+
 function deleteTeacher(index) {
     let teachers = JSON.parse(localStorage.getItem('teachers'));
     teachers.splice(index, 1);
@@ -95,7 +94,7 @@ function deleteTeacher(index) {
     displayTeachers();
 }
 
-// Display Students for Approval
+
 function displayStudents() {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const studentsTable = document.getElementById('students-table');
@@ -115,7 +114,7 @@ function displayStudents() {
     });
 }
 
-// Approve Student
+
 function approveStudent(index) {
     let users = JSON.parse(localStorage.getItem('users'));
     users[index].approved = true;
@@ -123,15 +122,15 @@ function approveStudent(index) {
     displayStudents();
 }
 
-// Load data on page load
+
 window.onload = () => {
     displayTeachers();
     displayStudents();
 };
 
-// Teacher Dashboard Script
 
-// Load teacher-specific appointments
+
+
 function loadTeacherAppointments() {
     const user = JSON.parse(localStorage.getItem('loggedInUser'));
     const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
@@ -153,7 +152,6 @@ function loadTeacherAppointments() {
     });
 }
 
-// Update appointment status
 function updateAppointmentStatus(index, status) {
     let appointments = JSON.parse(localStorage.getItem('appointments'));
     appointments[index].status = status;
@@ -162,19 +160,19 @@ function updateAppointmentStatus(index, status) {
     loadTeacherAppointments();
 }
 
-// Display messages
+
 function loadMessages() {
     const user = JSON.parse(localStorage.getItem('loggedInUser'));
     const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
     const messageContainer = document.getElementById('messages-container');
 
-    messageContainer.innerHTML = ''; // Clear previous messages
+    messageContainer.innerHTML = ''; 
     appointments.filter(app => app.teacher === user.email).forEach(app => {
         messageContainer.innerHTML += `<p><strong>${app.student}:</strong> ${app.message}</p>`;
     });
 }
 
-// Load all appointments for the teacher
+
 function loadAllAppointments() {
     const user = JSON.parse(localStorage.getItem('loggedInUser'));
     const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
@@ -192,13 +190,13 @@ function loadAllAppointments() {
     });
 }
 
-// Logout function
+
 document.getElementById('logout-button').addEventListener('click', () => {
     localStorage.removeItem('loggedInUser');
     window.location.href = 'index.html';
 });
 
-// Load data on page load
+
 window.onload = () => {
     loadTeacherAppointments();
     loadMessages();
@@ -206,6 +204,6 @@ window.onload = () => {
 };
 
 
-// Auto-load relevant pages
+
 if (window.location.pathname.includes('admin.html')) loadAdminAppointments();
 if (window.location.pathname.includes('teacher.html')) loadTeacherAppointments();

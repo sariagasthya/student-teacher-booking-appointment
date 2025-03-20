@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #99bcdb, #e2b4d6);
+    margin: 0;
+    padding: 0;
+    color: #4c4c51;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    background: #dcd77672;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+} 
+    
+h1 {
+    font-size: 22px;
+    color: #10110c9d;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 12px;
+    color: #160b0b;
+    margin-bottom: 15px;
+}
+
+input,
+select,
+button {
+    width: calc(100% - 20px);
+    margin-bottom: 8px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: 0.2s ease;
+}
+
+
+input:focus,
+select:focus {
+    border: 1px solid #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+}
+
+
+button {
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+
+button:hover {
+    background: #388e3c;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+h3:nth-of-type(2) {
+    margin-top: 20px;
+}
+
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+
+th {
+    background: #4caf50;
+    color: #fff;
+}
+
+
+.status-approved {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+
+#logout-button {
+    background: #d32f2f;
+    margin-top: 15px;
+}
+
+#logout-button:hover {
+    background: #b71c1c;
+}
+
+
+#messages-container {
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
